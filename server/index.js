@@ -1,5 +1,6 @@
 const keys  = require('./keys')
 const {Pool} = require('pg')
+const redis = require('redis')
 
 
 const express = require('express');
@@ -25,4 +26,9 @@ pgClient
 
 
 
-
+const redisClient = redis.createClient({
+    host: keys.redisHost,
+    port: keys.redisPort,
+    redis_strategy:() => 1000
+});
+const redisPublisher = redisClient.duplicate()
