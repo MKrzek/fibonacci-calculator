@@ -22,7 +22,6 @@ after_success:
   - docker push mkrzek15/multi-worker
 
 deploy:
-  edge: true
   provider: elasticbeanstalk
   region: eu-west-2
   app: fibonacci-calculator
