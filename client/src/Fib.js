@@ -48,12 +48,12 @@ import React, { useEffect, useState, useCallback } from 'react'
         return (
             <div>
                   <form onSubmit={handleSubmit}>
-                      <label>Enter your index</label>
+                      <label>Enter your index: </label>
                       <input
                        value={index}
                        onChange = {e => setIndex(e.target.value)}
 
-                      />
+                      />{' '}
                       <button>Submit</button>
                   </form>
                   <h3>Indexes I have seen:</h3>
