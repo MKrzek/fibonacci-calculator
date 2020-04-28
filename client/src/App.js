@@ -9,10 +9,10 @@ function App() {
     <Router>
     <div className="App">
     <h1>Fib Calculator</h1>
-      <header>
+      <header style={{marginBottom:"10px"}}>
         <Link to='/'>Home</Link>{' '}
         <Link to='/otherpage'>Other Page</Link>
-      </header >
+      </header>
        <div>
           <Route exact path="/" component={Fib}/>
           <Router path="/otherpage" component={OtherPage}/>
